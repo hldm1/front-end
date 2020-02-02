@@ -1,0 +1,73 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  height: auto;
+  margin-bottom: 2rem;
+  padding: 0 0 20px 0;
+  border: 1px solid #f1f1f1;
+  transition-duration: 0.2s;
+  &:hover {
+    box-shadow: 0px 0px 4px 3px #efefef;
+  }
+  &:hover .thumbnail {
+    transform: scale(1.1);
+  }
+  @include tablet {
+    width: 45%;
+  }
+  @include desktop {
+    width: 30%;
+  }
+
+  .imgLink {
+    width: 100%;
+    height: auto;
+  }
+  .thumbnailWrapper {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+    @include tablet {
+      height: 230px;
+    }
+  }
+  .thumbnail {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    transition-duration: 0.4s;
+  }
+
+  .socialWrapper {
+    width: 90%;
+  }
+  .name {
+    color: $text;
+    font-size: $mobileSubtitle;
+    font-family: $regularText;
+    font-weight: 900;
+    @include tablet {
+      font-size: $tabletSubtitle;
+    }
+    @include desktop_small {
+      font-size: $desktopSubtitle;
+    }
+  }
+  .socialDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .detail {
+    color: $text;
+    font-family: $regularText;
+  }
+}

@@ -1,0 +1,50 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+body {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: $provisional;
+  color: $text;
+}
+
+p {
+  margin: 0;
+  font-size: $mobileText;
+  font-family: $text;
+  @include tablet {
+    font-size: $tabletText;
+  }
+  @include desktop_small {
+    font-size: $desktopText;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}

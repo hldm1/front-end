@@ -1,0 +1,28 @@
+.sorterWrapper {
+  width: 100%;
+  margin-bottom: 40px;
+  display: flex;
+
+  .title {
+    color: $text;
+    font-family: $regularText;
+    font-size: $tabletSubtitle;
+    margin-right: 20px;
+  }
+
+  .sorter {
+    border: none;
+    background-color: #f1f1f1;
+    padding: 5px 10px;
+    color: $text;
+    font-family: $regularText;
+    font-weight: 900;
+    font-size: $mobileSubtitle;
+  }
+
+  option {
+    color: $text;
+    font-family: $regularText;
+    font-size: $mobileSubtitle;
+  }
+}

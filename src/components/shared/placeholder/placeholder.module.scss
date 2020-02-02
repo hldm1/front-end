@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  span {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    color: black;
+  }
+}
