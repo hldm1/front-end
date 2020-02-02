@@ -1,0 +1,91 @@
+{
+  "name": "front-end-test",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "express": "^4.17.1",
+    "node-sass": "4.13.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-lazyload": "^2.6.5",
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.3.0",
+    "redux": "^4.0.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.3.2",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "react-test-renderer": "^16.12.0",
+    "sass": "1.23.7",
+    "sass-loader": "^8.0.0",
+    "sass-resources-loader": "^2.0.1",
+    "serviceworker-webpack-plugin": "^1.0.1",
+    "style-loader": "^1.0.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0",
+    "yarn": "^1.21.1"
+  },
+  "scripts": {
+    "test": "react-scripts test",
+    "tester": "jest",
+    "eject": "react-scripts eject",
+    "start": "webpack-dev-server --open --mode development",
+    "build": "webpack --mode production",
+    "server-prod-yarn": "yarn && webpack --mode production && node server.js",
+    "server-prod-npm": "npm install && webpack --mode production && node server.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 5 chrome version",
+      "last 5 firefox version",
+      "last 5 safari version"
+    ]
+  },
+  "jest": {
+    "modulePaths": [
+      "/node_modules",
+      "./utils",
+      "./style"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src",
+      "utils",
+      "style"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss)$": "identity-obj-proxy",
+      "^shared(.*)$": "<rootDir>/src/components/shared/$1",
+      "^components(.*)$": "<rootDir>/src/components/$1",
+      "^pages(.*)$": "<rootDir>/src/pages/$1",
+      "^layout$(.*)": "<rootDir>/src/layout/$1",
+      "^utils(.*)$": "<rootDir>/utils/$1",
+      "^style(.*)$": "<rootDir>/style/$1"
+    }
+  }
+}
