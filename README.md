@@ -11,7 +11,7 @@ With yarn: yarn server-prod-yarn
 
 - Then follow the link: http://localhost:8009/
 
-- To use the tests, run the following command: yarn tester
+- To use the tests, run the following command: yarn tester (Make sure the server is running)
 
 ********************************************************
 Libraries:

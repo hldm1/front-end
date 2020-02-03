@@ -14,20 +14,16 @@ function App() {
   const [userData, setUserData] = useState([]);
   const dispatch = useDispatch();
 
-
-
-  useEffect(() => {
-    if (!dataReady) {
-      fetchData()
-        .then(response => {
-          dispatch(addUsers(response));
-          dispatch(setSelection('id_ascending'));
-          dispatch(activePaginationField(0));
-          setUserData(response);
-          setReady(true);
-        });
-    }
-  }, [])
+  if (!dataReady) {
+    fetchData()
+      .then(response => {
+        dispatch(addUsers(response));
+        dispatch(setSelection('id_ascending'));
+        dispatch(activePaginationField(0));
+        setUserData(response);
+        setReady(true);
+      });
+  }
 
   useEffect(() => {
     const homePage = dataLimiter(userData, 0, 21);
